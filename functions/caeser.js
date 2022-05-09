@@ -11,6 +11,7 @@ function shiftPhrase(phrase,shift){
     let encryptedWord=""
     for(let i=0;i<phrase.length;i++){
         let char=phrase.charAt(i);
+        if(char!=''){
         let pos=char.charCodeAt()+shift
         if(pos>122){
             let shiftIndex=(pos-122)
@@ -21,6 +22,7 @@ function shiftPhrase(phrase,shift){
             encryptedWord=encryptedWord+String.fromCharCode(char.charCodeAt()+shift)
         }
     }
+}
     return encryptedWord
 }
 
